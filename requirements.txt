@@ -1,0 +1,58 @@
+# Trading & Broker APIs
+alpaca-py>=0.24.0
+alpaca-trade-api>=3.1.1
+
+# Data & Market Analysis
+yfinance>=0.2.36
+pandas>=2.0.0
+numpy>=1.24.0
+# pandas-ta>=0.4.71b0  # Skipping - requires numba which doesn't support Python 3.14 yet
+
+# Options Pricing & Greeks
+py_vollib>=1.0.1
+scipy>=1.10.0
+
+# Backtesting (optional - can skip if issues)
+# vectorbt>=0.26.1
+
+# Database
+sqlalchemy>=2.0.0
+alembic>=1.13.0
+
+# Web Dashboard
+streamlit>=1.31.0
+plotly>=5.18.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Scheduling & Automation
+schedule>=1.2.0
+
+# Logging & Monitoring
+loguru>=0.7.0
+
+# Configuration & Environment
+python-dotenv>=1.0.0
+pydantic>=2.6.0
+pydantic-settings>=2.1.0
+pyyaml>=6.0.0
+
+# Notifications (optional)
+# sendgrid>=6.11.0
+# twilio>=8.13.0
+
+# API & HTTP
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# Data Processing
+python-dateutil>=2.8.0
+pytz>=2024.1
+
+# Testing (optional - can skip)
+# pytest>=8.0.0
+# pytest-asyncio>=0.23.4
+
+# Utilities
+tqdm>=4.66.0
+tabulate>=0.9.0
