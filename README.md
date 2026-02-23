@@ -3,6 +3,21 @@
 An autonomous stock and options trading bot with sentiment analysis,
 ML-based predictions, and multi-layer risk management.
 
+---
+
+> ## ⚠️ IMPORTANT DISCLAIMER
+>
+> **This project is for EXPERIMENTAL and EDUCATIONAL purposes only.**
+>
+> - **Paper trading only.** Use this solution exclusively with paper/simulated trading accounts. Do not use it with real money.
+> - **No financial advice.** Nothing in this repository constitutes investment advice, recommendations, or endorsements.
+> - **Your responsibility.** Anyone who references or uses this code must conduct their own due diligence before making any investment decisions. Trading involves substantial risk of loss.
+> - **Use at your own risk.** The authors and contributors are not responsible for any financial losses resulting from the use of this software.
+>
+> **If you choose to trade with real capital, you do so entirely at your own risk.**
+
+---
+
 ## Investment Profile
 
 | Parameter     | Value                    |
