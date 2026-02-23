@@ -1,7 +1,13 @@
-# Stock Trading Agent
+# 📈 Stock Trading Agent
+
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Alpaca API](https://img.shields.io/badge/Alpaca-API-green?logo=alpaca)](https://alpaca.markets)
+[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-red?logo=streamlit)](https://streamlit.io)
+[![Paper Trading](https://img.shields.io/badge/Mode-Paper%20Trading-orange)](/)
+[![Experimental](https://img.shields.io/badge/Status-Experimental-purple)](/)
 
 An autonomous stock and options trading bot with sentiment analysis,
-ML-based predictions, and multi-layer risk management.
+ML-based predictions, and multi-layer risk management. 🤖
 
 ---
 
@@ -18,7 +24,7 @@ ML-based predictions, and multi-layer risk management.
 
 ---
 
-## Investment Profile
+## 💰 Investment Profile
 
 | Parameter     | Value                    |
 | ------------- | ------------------------ |
@@ -29,7 +35,7 @@ ML-based predictions, and multi-layer risk management.
 | Timeline      | Feb 2026 – Dec 2026      |
 | Paper trading | 1–2 months before live   |
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 ┌────────────────────────────────────────────────────────┐
@@ -45,7 +51,7 @@ ML-based predictions, and multi-layer risk management.
 └──────────────────────┴────────────────┴────────────────┘
 ```
 
-### Signal scoring (0–100)
+### 🎯 Signal scoring (0–100)
 
 | Component          | Points     | Source                                         |
 | ------------------ | ---------- | ---------------------------------------------- |
@@ -54,22 +60,22 @@ ML-based predictions, and multi-layer risk management.
 | ML prediction      | 0–25       | Gradient boosting (3 yr training, 20 features) |
 | Market regime      | −10 to +10 | Bull / bear / neutral adjustment               |
 
-Minimum score for entry: **60**.
+Minimum score for entry: **60**. ✨
 
-### Strategies
+### 📊 Strategies
 
-**Stocks** – Momentum / trend-following on 80+ large-cap names across
+**📈 Stocks** – Momentum / trend-following on 80+ large-cap names across
 all sectors. Buys on bullish signals, exits via 8% stop-loss or 15%
 profit target.
 
-**Options** – Generated from the same scored signals:
+**📉 Options** – Generated from the same scored signals:
 
-- **Long calls** on high-conviction bullish setups
-- **Long puts** on bearish setups
-- **Bull call spreads** on moderate conviction (defined risk, ≥ 1:2 R:R)
+- **📗 Long calls** on high-conviction bullish setups
+- **📕 Long puts** on bearish setups
+- **📊 Bull call spreads** on moderate conviction (defined risk, ≥ 1:2 R:R)
 - 30–45 DTE monthly options, filtered by open interest and IV
 
-### Risk management
+### ⚠️ Risk management
 
 | Rule                       | Limit                           |
 | -------------------------- | ------------------------------- |
@@ -81,7 +87,7 @@ profit target.
 | Max total positions        | 15                              |
 | Cash reserve               | ≥ 5%                            |
 
-## Project structure
+## 📁 Project structure
 
 ```
 stock-trading-agent/
@@ -120,14 +126,14 @@ stock-trading-agent/
 └── .env                       # API keys (not committed)
 ```
 
-## Quick start
+## 🚀 Quick start
 
-### 1. Prerequisites
+### 1. 📋 Prerequisites
 
-- Python 3.11+ (tested on 3.14)
+- Python 3.11+ (tested on 3.14) 🐍
 - Alpaca paper trading account (free) – https://alpaca.markets
 
-### 2. Install
+### 2. 📦 Install
 
 ```bash
 cd /<your_path>/stock-trading-agent
@@ -137,9 +143,9 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 3. Configure
+### 3. ⚙️ Configure
 
-Copy `.env.example` to `.env` and fill in your Alpaca API keys:
+Copy `.env.example` to `.env` and fill in your Alpaca API keys: 🔑
 
 ```
 ALPACA_API_KEY=PKxxxxxxxxxxxxxxxxx
@@ -149,29 +155,29 @@ EMAIL_ADDRESS=your_email@example.com
 PAPER_TRADING=true
 ```
 
-### 4. Initialize & test
+### 4. 🔧 Initialize & test
 
 ```bash
 python scripts/setup_database.py     # create DB tables & directories
 python scripts/test_connection.py    # verify API keys & data access
 ```
 
-### 5. Run
+### 5. ▶️ Run
 
 ```bash
-# Terminal 1 – trading bot
+# Terminal 1 – trading bot 🖥️
 python scripts/paper_trading.py
 
-# Terminal 2 – dashboard (optional)
+# Terminal 2 – dashboard (optional) 📊
 streamlit run dashboard/app.py       # opens http://localhost:8501
 ```
 
-The bot scans every 15 minutes during market hours (9:30 AM – 4:00 PM ET).
+The bot scans every 15 minutes during market hours (9:30 AM – 4:00 PM ET). ⏰  
 Press `Ctrl+C` to stop.
 
-## Configuration
+## ⚙️ Configuration
 
-All trading parameters live in `config/trading_rules.py`. Key knobs:
+All trading parameters live in `config/trading_rules.py`. Key knobs: 🔧
 
 ```python
 STOCK_ALLOCATION      = 0.50   # 50% stocks
@@ -188,30 +194,30 @@ OPTIONS_MAX_DTE       = 45
 
 Restart the bot after changing config.
 
-## Monitoring
+## 📊 Monitoring
 
-### Dashboard
+### 📈 Dashboard
 
 `streamlit run dashboard/app.py` → pages for portfolio, positions,
-signals, performance charts, and risk metrics.
+signals, performance charts, and risk metrics. 🎨
 
-### Logs
+### 📝 Logs
 
 ```bash
-tail -f logs/trading.log     # all activity
-tail -f logs/errors.log      # errors only
+tail -f logs/trading.log     # all activity 📋
+tail -f logs/errors.log      # errors only ⚠️
 ```
 
-### Email alerts
+### 📧 Email alerts
 
 Configured via `.env`. Sends alerts on stop-loss triggers,
-daily circuit breaker, and large positions (> $5K).
+daily circuit breaker, and large positions (> $5K). 🔔
 
-## Disclaimers
+## ⚠️ Disclaimers
 
-- **High risk.** Aggressive strategy using options leverage. You can
+- **🔥 High risk.** Aggressive strategy using options leverage. You can
   lose the entire investment.
-- **No guarantees.** Past performance ≠ future results.
-- **Paper first.** Test for 1–2 months before risking real money.
-- **Tax implications.** Frequent trading has tax consequences.
-- **Monitoring required.** Check the bot daily even in paper mode.
+- **📉 No guarantees.** Past performance ≠ future results.
+- **📄 Paper first.** Test for 1–2 months before risking real money.
+- **💸 Tax implications.** Frequent trading has tax consequences.
+- **👀 Monitoring required.** Check the bot daily even in paper mode.
