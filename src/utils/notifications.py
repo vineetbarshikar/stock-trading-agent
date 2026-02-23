@@ -208,7 +208,8 @@ Automated Trading Agent
     def send_system_error(self, error_type: str, error_message: str, stack_trace: Optional[str] = None):
         """Send system error notification."""
         subject = f"❌ System Error: {error_type}"
-        
+        stack_section = f"Stack Trace:\n{stack_trace}" if stack_trace else ""
+
         body = f"""
 System Error Alert
 ==================
@@ -217,7 +218,7 @@ Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S ET')}
 Error Type: {error_type}
 Error Message: {error_message}
 
-{f'Stack Trace:\n{stack_trace}' if stack_trace else ''}
+{stack_section}
 
 The system may require attention.
 

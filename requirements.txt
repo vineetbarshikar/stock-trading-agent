@@ -12,6 +12,9 @@ numpy>=1.24.0
 py_vollib>=1.0.1
 scipy>=1.10.0
 
+# Machine Learning
+scikit-learn>=1.3.0
+
 # Backtesting (optional - can skip if issues)
 # vectorbt>=0.26.1
 
