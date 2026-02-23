@@ -1,4 +1,4 @@
-# Automated Trading Agent
+# Stock Trading Agent
 
 An autonomous stock and options trading bot with sentiment analysis,
 ML-based predictions, and multi-layer risk management.
@@ -18,7 +18,7 @@ ML-based predictions, and multi-layer risk management.
 
 ```
 ┌────────────────────────────────────────────────────────┐
-│                     Trading Bot v2                      │
+│                     Stock Trading Agent                │
 ├──────────┬──────────────┬──────────────┬───────────────┤
 │  Data    │  Strategies  │  Execution   │  Portfolio    │
 │          │              │              │               │
@@ -115,7 +115,7 @@ stock-trading-agent/
 ### 2. Install
 
 ```bash
-cd /Users/vbarshikar/Documents/Git/stock-trading-agent
+cd /<your_path>/stock-trading-agent
 python3 -m venv stock-trading-agent          # or use existing venv
 source stock-trading-agent/bin/activate
 pip install --upgrade pip
@@ -130,7 +130,7 @@ Copy `.env.example` to `.env` and fill in your Alpaca API keys:
 ALPACA_API_KEY=PKxxxxxxxxxxxxxxxxx
 ALPACA_SECRET_KEY=xxxxxxxxxxxxxxxxxx
 ALPACA_BASE_URL=https://paper-api.alpaca.markets
-EMAIL_ADDRESS=vbarshikar@gmail.com
+EMAIL_ADDRESS=your_email@example.com
 PAPER_TRADING=true
 ```
 
